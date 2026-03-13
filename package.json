@@ -1,0 +1,17 @@
+{
+  "name": "di-example",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "node -r ts-node/register main.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "reflect-metadata": "^0.2.2",
+    "ts-node": "^10.9.2",
+    "typedi": "^0.10.0",
+    "typescript": "^5.9.3"
+  }
+}
