@@ -1,11 +1,9 @@
 
-import { log } from './di-registry';
-import {DevicesModule} from './devices';
 
-log.debug("Starting");
+function start() {
+    // We have plenty of stuff like this in auth server...
+    require('./devices')().destroy();
+}
 
-const d = DevicesModule();
-
-d.destroy();
-
-log.debug('Finished')
+setTimeout(() => { start(); }, 3000);
+console.log('server started')
