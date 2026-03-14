@@ -1,0 +1,48 @@
+{
+  "name": "di-example",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node -r ts-node/register src/main.ts",
+    "test": "jest",
+    "build": "tsc",
+    "deps": "depcruise src --include-only '^src' --config .dependency-cruiser.cjs --output-type dot | dot -T svg > dependency-graph.svg",
+    "lint": "eslint src"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "hot-shots": "^14.1.1",
+    "jest": "^30.3.0",
+    "reflect-metadata": "^0.2.2",
+    "ts-node": "^10.9.2",
+    "typedi": "^0.10.0",
+    "typescript": "^5.9.3"
+  },
+  "type": "module",
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/dist/"
+    ],
+    "globals": {
+      "ts-jest": {
+        "tsconfig": {
+          "experimentalDecorators": true,
+          "emitDecoratorMetadata": true
+        }
+      }
+    }
+  },
+  "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "@types/node": "^25.5.0",
+    "dependency-cruiser": "^17.3.9",
+    "eslint": "^10.0.3",
+    "ts-jest": "^29.4.6",
+    "typescript-eslint": "^8.57.0"
+  }
+}
